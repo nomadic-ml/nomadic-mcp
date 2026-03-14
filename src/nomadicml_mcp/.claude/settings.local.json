@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__nomadicml__verify_auth",
+      "mcp__nomadicml__list_analysis_options",
+      "mcp__nomadicml__analyze_video",
+      "mcp__nomadicml__get_analysis"
+    ]
+  }
+}

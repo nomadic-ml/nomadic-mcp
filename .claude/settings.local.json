@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(NOMADICML_API_KEY=\"sk_5qvQGF10hxwgT2jrM0Bez3qzTwBKa4yqXsPQgheWDiy0Fo91\" /tmp/nomadic-venv/bin/python3 -c \"\nfrom nomadicml import NomadicML\nclient = NomadicML\\(api_key='sk_5qvQGF10hxwgT2jrM0Bez3qzTwBKa4yqXsPQgheWDiy0Fo91'\\)\nresult = client.verify_auth\\(\\)\nprint\\(result\\)\n\")",
+      "mcp__nomadicml__analyze_video",
+      "mcp__nomadicml__upload_video",
+      "Bash(.venv/bin/python -m pytest tests/test_server.py -v 2>&1)",
+      "mcp__nomadicml__list_analysis_options"
+    ]
+  }
+}
