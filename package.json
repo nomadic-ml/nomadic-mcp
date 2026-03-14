@@ -1,0 +1,26 @@
+{
+  "name": "nomadicml-mcp",
+  "version": "0.2.0",
+  "description": "MCP server for NomadicML — full video analysis SDK for Claude Code and Claude.ai",
+  "keywords": ["mcp", "nomadicml", "video", "ai", "claude", "video-analysis"],
+  "homepage": "https://nomadicml.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nomadic-ml/nomadicml-mcp"
+  },
+  "license": "MIT",
+  "bin": {
+    "nomadicml-mcp": "./bin/run.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  },
+  "files": [
+    "bin/",
+    "scripts/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
