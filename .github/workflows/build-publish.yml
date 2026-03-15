@@ -33,30 +33,6 @@ jobs:
           name: nomadicml-mcp-darwin-arm64
           path: dist/nomadicml-mcp-darwin-arm64
 
-  build-macos-x64:
-    name: Build macOS (Intel)
-    runs-on: macos-13
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install dependencies
-        run: |
-          pip install -e ".[dev]"
-          pip install pyinstaller
-      - name: Build binary
-        run: |
-          pyinstaller \
-            --onefile \
-            --name nomadicml-mcp-darwin-x64 \
-            --distpath dist/ \
-            src/nomadicml_mcp/server.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: nomadicml-mcp-darwin-x64
-          path: dist/nomadicml-mcp-darwin-x64
-
   build-linux-x64:
     name: Build Linux (x64)
     runs-on: ubuntu-latest
@@ -117,8 +93,8 @@ jobs:
           path: dist/
       - name: Flatten dist directory
         run: |
-          find dist/ -type f | xargs -I{} mv {} dist/
-          find dist/ -type d -empty -delete
+          find dist/ -type f -exec mv {} dist/ \;
+          find dist/ -mindepth 1 -type d -exec rm -rf {} + 2>/dev/null || true
       - uses: softprops/action-gh-release@v2
         with:
           files: dist/*
