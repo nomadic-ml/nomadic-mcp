@@ -11,7 +11,7 @@ const os = require("os");
 const { execSync } = require("child_process");
 
 const PACKAGE_VERSION = require("../package.json").version;
-const GITHUB_REPO = "nomadic-ml/nomadicml-mcp";
+const GITHUB_REPO = "nomadic-ml/nomadic-mcp";
 const BIN_DIR = path.join(__dirname, "..", "bin");
 
 function getPlatformKey() {
