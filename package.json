@@ -1,6 +1,6 @@
 {
   "name": "nomadic-mcp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MCP server for NomadicML — full video analysis SDK for Claude Code and Claude.ai",
   "keywords": ["mcp", "nomadicml", "video", "ai", "claude", "video-analysis"],
   "homepage": "https://nomadicml.com",
