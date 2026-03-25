@@ -1,4 +1,6 @@
-# nomadicml-mcp
+# nomadic-mcp
+
+[![npm](https://img.shields.io/npm/v/nomadic-mcp)](https://www.npmjs.com/package/nomadic-mcp)
 
 MCP server for NomadicML — use NomadicML's video analysis platform directly from Claude Code and Claude.ai. Upload videos, run analysis, search events, and manage your fleet, all through natural language.
 
@@ -8,7 +10,7 @@ MCP server for NomadicML — use NomadicML's video analysis platform directly fr
 # Register with Claude Code
 claude mcp add nomadicml \
   -e NOMADICML_API_KEY=your_api_key \
-  -- npx nomadicml-mcp
+  -- npx nomadic-mcp
 ```
 
 Get your API key at [app.nomadicml.com](https://app.nomadicml.com) → **Profile** → **API Keys**.
